@@ -1,0 +1,36 @@
+<?php
+$title="/Vehicle";
+require'include/header.php';
+require_once 'db/conn.php';
+?> 
+<br/>
+<br/>
+<table width="100%" height="650px" cellspacing="5px" cellpadding="5px" align="center">
+<tr>
+<td align="center">
+<h1 align="center"><span class="p1">Vehicle Details</span></h1>
+<form action="successvehicle.php" method="post">
+ <div class="container p1">
+ <label for="veh_id">Vehicle ID</label>
+ <input name="veh_id" type="number" placeholder="Enter Your Vehicle ID" maxlength="50" required id="veh_id" />
+ <label for="veh_num">Vehicle Number</label>
+ <input name="veh_num" type="text" placeholder="Enter Your Vehicle Name" maxlength="50" required id="veh_num" />
+ <label for="veh_type">Vehicle Type</label>
+ <input name="veh_type" type="text" placeholder="Enter Your Vehicle type" maxlength="50" required id="veh_type" />
+ <label for="chechis">Chechis Number</label>
+ <input name="chechis" type="text" placeholder="Enter the Vehicle Chechis Number " maxlength="50" required  id="chechis" />
+ <label for="engine_no">Engine Number</label>
+ <input name="engine_no" type="text" placeholder="Enter the Vehicle Engine Number" maxlength="11" required id="engine_no" />
+ <label for="veh_desc">Vehicle Description</label><br/>
+ <input name="veh_desc" type="text" placeholder="Enter Your Vehicle Description" maxlength="150" required id="veh_desc" />
+ <label for="cus_id">cus_id</label>
+ <input name="cus_id" type="number" placeholder="Enter the Customer ID" maxlength="11" required id="cus_id" />
+ </div>
+<button type="submit"  name="submit" >SAVE</button>
+ </form>
+ </td>
+ </tr>
+ </table>
+ <br/>
+ <a href="index.php"><button type="button">BACK HOME</button></a>
+ <?php require'include/footer.php'?>

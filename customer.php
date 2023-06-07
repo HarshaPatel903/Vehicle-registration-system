@@ -1,0 +1,34 @@
+<?php
+$title="/Customer";
+require'include/header.php';
+require_once 'db/conn.php';
+?> 
+<br/>
+<br/>
+<table width="100%" height="650px" cellspacing="5px" cellpadding="5px" align="center">
+<tr>
+ <td align="center">
+<h1 align="center"><span class="p1">Customer Details</span></h1>
+<form action="successCustomer.php" method="post">
+ <div class="container p1">
+ <label for="cus_id">Customer ID</label>
+ <input name="cus_id" type="number" placeholder="Enter Your ID" maxlength="50" required id="cus_id" />
+ <label for="cus_name">Customer Name</label>
+ <input name="cus_name" type="text" placeholder="Enter Your Name" maxlength="50" required id="cus_name" />
+ <label for="cus_addres">Customer Address</label>
+ <input name="cus_addres" type="text" placeholder="Enter Your Address as per Aadhar" maxlength="50" required id="cus_addres" />
+ <label for="cus_email">Customer Email</label>
+ <input name="cus_email" type="text" placeholder="Enter Your Email Address " maxlength="50" required  id="cus_email" />
+ <label for="cus_mobile">Contact Number</label>
+ <input name="cus_mobile" type="text" placeholder="Enter Your Contact Number" maxlength="11" required id="cus_mobile" />
+ <label for="cus_dob">Date of Birth</label>
+ <input name="cus_dob" type="date" placeholder="Enter Your dob as per 10th marks card" required id="cus_dob" />
+ </div>
+<button type="submit"  name="submit" >SAVE</button>
+ </form>
+ </td>
+ </tr>
+ </table>
+ <br/>
+ <a href="index.php"><button type="button">BACK HOME</button></a>
+ <?php require'include/footer.php'?>

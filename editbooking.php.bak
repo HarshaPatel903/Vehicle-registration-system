@@ -1,0 +1,48 @@
+<?php
+$title="/Edit Bookings";
+require'include/admin_header.php';
+require_once 'db/conn.php';
+
+if(!isset($_GET['id']))
+    {
+        echo 'error';
+        header("Location: viewbooking.php");
+    }
+    else{
+        $id = $_GET['id'];
+        $booking = $crud->getbookingdetails($id);
+	}
+?> 
+<br/>
+<br/>
+<table width="100%" height="650px" cellspacing="5px" cellpadding="5px" align="center">
+<tr>
+<td align="center">
+<h1 align="center"><span class="p1">Edit Booking Details</span></h1>
+<form action="editpostbooking.php" method="post">
+ <div class="container p1">
+ <label for="booking_id">Booking ID</label>
+ <input name="booking_id" type="number" value="<?php echo $booking['booking_id'] ?>"  required id="booking_id" />
+ <label for="reg_fee">Registration Fee status</label>
+ <input name="reg_fee" type="text" value="<?php echo $booking['reg_fee'] ?>" maxlength="50" required id="reg_fee" />
+ <label for="temp_no">Temporary Registration Number</label>
+ <input name="temp_no" type="text" value="<?php echo $booking['temp_no'] ?>" maxlength="50" required id="temp_no" />
+ <label for="cus_id">Customer ID</label>
+ <input name="cus_id" type="number" value="<?php echo $booking['cus_id'] ?>" required id="cus_id" />
+ <label for="status">STATUS(0-pending;1-confirmed)</label>
+ <input list="status" id="status" >
+ <datalist id="status">
+    <option value="0">
+    <option value="1">
+ </datalist>
+  <label for="pamveh_no">Parmanent Vehicle Number</label>
+ <input name="pamveh_no" type="number" value="<?php echo $booking['pamveh_no'] ?>" required id="pamveh_no" />
+ </div>
+<button type="submit"  name="submit" class="bbutton">SAVE CHANGES</button>
+ </form>
+ </td>
+ </tr>
+ </table>
+ <br/>
+ <a href="index.php"><button type="button">BACK HOME</button></a>
+ <?php require'include/footer.php'?>

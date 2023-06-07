@@ -1,0 +1,42 @@
+<?php
+    $title = '/View Customer'; 
+
+    require_once 'include/admin_header.php';
+    require_once 'db/conn.php'; 
+
+    // Get all customer
+    $results = $crud->getvehicle();
+?>
+<br/>
+<br/>
+<br/>
+
+    <table width="100%" cellspacing="10px" align="center" style="border-collapse: collapse;">
+        <tr>
+            <th style="text-align: left;padding: 8px;">Vehicle ID</th>
+            <th style="text-align: left;padding: 8px;">Vehicle Name</th>
+            <th style="text-align: left;padding: 8px;">Vehicle Type</th>
+            <th style="text-align: left;padding: 8px;">Chechis Number</th>
+            <th style="text-align: left;padding: 8px;">Engine Number</th>
+            <th style="text-align: left;padding: 8px;">Vehicle Description</th>
+            <th style="text-align: left;padding: 8px;">Customer ID</th>
+        </tr>
+        <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
+           <tr>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['veh_id'] ?></td>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['veh_num'] ?></td>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['veh_type'] ?></td>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['chechis'] ?></td>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['engine_no'] ?></td>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['veh_desc'] ?></td>
+                <td style="text-align: left;padding: 8px;"><?php echo $r['cus_id'] ?></td>
+                <td style="text-align: left;padding: 8px;">
+                    <a onclick="return confirm('Are you sure you want to EDIT this vehicle?');" href="editvehicle.php?id=<?php echo $r['veh_id'] ?>"><button>EDIT</button></a>
+                    <a onclick="return confirm('Are you sure you want to DELETE this vehicle?');" href="deletevehicle.php?id=<?php echo $r['veh_id'] ?>"><button>DELETE</button></a>
+                </td>
+           </tr> 
+        <?php }?>
+    </table>
+<br/>
+<br/>
+<?php require'include/footer.php'?>	

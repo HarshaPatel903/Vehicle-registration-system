@@ -1,0 +1,68 @@
+<?php $title="/home";
+ require_once 'include/header.php';
+?>
+<br/>
+<br/>
+<img src="plate.jpg" width="100%" height="390px" style="border-radius:10px;">
+<br/>
+<br/>
+<table width="100%" height="650px" cellspacing="3" cellpadding="2" align="center" bgcolor="white" style="border-radius:10px;">
+  <tr> 
+     <td align="center">
+	    <ul>
+		  <li><img src="logoreg.png" height="250px" width="100%" style="border-radius:10px;" >
+		     <h2><span class="p1"> Customer Registration </span></h2>
+		  <li><span class="p1">
+		    Vehicle registration is needed for many purposes. Firstly, it proves the ownership of the vehicle.
+			The owner of the vehicle is the name of the person on whom the vehicle is registered as per the RTO records.
+			It is required if you decide to sell the vehicle.Every vehicle that is registered will be given a vehicle registration card.
+			</span>
+		  </li>
+		</ul>
+		<ul>
+		  <li><img src="hyn.jpg" height="250px" width="100%" style="border-radius:10px;">
+		     <h2><span class="p1"> Vehicle Registration</span></h2>
+		  <li><span class="p1">
+            Apart from vehicle registration or vahan registration, RTO is responsible for issuing driving licences, inspect vehicle insurance, and keep a tab of pollution created by vehicles.
+            The RTO assigns a permanent registration number to your vehicle that you will not be allowed to change under any circumstances. 
+            As soon as you buy the vehicle, the dealer will assign a temporary registration number which is usually valid for a month.
+            Within one month, you should get a permanent registration number for your vehicle.
+			</span>
+		  </li>
+		</ul>
+		<ul>
+		  <li><img src="RTO.jpg" height="250px" width="100%" style="border-radius:10px;">
+		     <h2><span class="p1"> RTO(Regional Transport Office) </span></h2>
+		  <li><span class="p1">
+		    In India, it is mandatory to register your new vehicle with the RTO. RTO stands for “Regional Transport Office”.
+            Regional Transport Office is a government organisation that is responsible to keep a track of all the vehicles on Indian roads.
+            For this purpose, every vehicle in India should be registered in the nearby RTO Office.
+			</span>
+		  </li>
+		</ul>
+	  </td>
+   </tr>
+</table>
+<br/>
+<br/>
+<table width="100%" height="250px" cellspacing="3" cellpadding="2" align="center" bgcolor="white" style="border-radius:10px;">
+  <tr> 
+     <td align="center">
+	    <table width="1100px" height="150px" cellspacing="3" cellpadding="2" align="center" bgcolor="#eeeee4" style="border-radius:10px;">
+        <tr> 
+        <td align="center">
+	    <span class="p1">
+		<h2><span class="p1" align="center"> The Legal Aspects </span></h2>
+        Registering a vehicle is a not a choice but a legal requirement in our country. 
+        The Motor Vehicles Act, 1988 makes vehicle registration mandatory in our country.Registration of vehicle falls under this Act.
+		According to the Act, a person cannot drive a vehicle that is not registered and the registration number should be displayed on the vehicle at all times.
+	    </span>
+	    </td>
+        </tr>
+        </table>
+	 </td>
+  </tr>
+</table>
+<br/>
+<br/>
+<?php require'include/footer.php'?>

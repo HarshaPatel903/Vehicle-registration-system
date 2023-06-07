@@ -1,0 +1,29 @@
+ <?php 
+    $title="/Success";
+    require_once 'include/header.php'; 
+    require_once 'db/conn.php';
+
+
+    if(isset($_POST['submit'])){
+		$booking_id = $_POST['booking_id'];
+		$reg_fee = $_POST['reg_fee'];
+		$temp_no = $_POST['temp_no'];
+		$cus_id = $_POST['cus_id'];
+		$issuccess = $crud->insertvehicle($booking_id,$reg_fee,$temp_no,$cus_id);
+		if($issuccess){
+			echo '<h1 style="color:#04aa6D;" align="center"><span class="p1">Your Detailes has been saved successfull</span></h1>';
+		}
+		else{
+			echo 'Error Ocurred';
+		}
+	}
+?>
+	<br/>
+	<br/>
+	<p align="center"><span class="p1" class="text">
+	<h2 align="center"><span class="p1">Your Booking Status : Pending</span></h2><br/>
+	</p>
+	<br/>
+	<a href="index.php"><button type="button">BACK HOME</button></a>
+	<?php require'include/footer.php'?>
+	
